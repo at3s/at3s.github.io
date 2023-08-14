@@ -1,0 +1,563 @@
+body 
+{
+	background: url(../images/bkg_loginpage.jpg) no-repeat center center fixed;
+	margin: 0px;
+	padding: 0px;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+html 
+{
+     height:100%;
+     min-height:100%;
+}
+
+body 
+{
+    min-height:100%;
+}
+
+html, body {
+    font-family: mainFont;
+     margin: 0;
+    height: 100%;
+}
+
+.nopadding
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+@font-face {
+	font-family: mainFont;
+     src:  url('../fonts/OpenSans-Regular.eot');
+     src:  url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+          url('../fonts/OpenSans-Regular.woff') format('woff'),
+          url('../fonts/OpenSans-Regular.ttf') format('truetype'), 
+          url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg'); 
+	
+}
+
+/* Navigation Bar************/
+
+.shb-navbar
+{
+	overflow: hidden;
+	border: 0px;
+}
+
+.shb-navbar-brand 
+{
+    display:none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+/*.shb-navbar-brand img
+{
+	margin: 10px 0px 10px 10px;
+	padding: 0px;
+}*/
+
+.shb-navbar-brand .brand-logo {
+    margin: 10px 0px 10px 10px;
+	padding: 0px;
+    width: 154px;
+    height: 61px;
+    background: url(../images/logo.png);
+}
+
+.shb-navbar-right
+{
+	float: right;
+	margin-top: 10px;
+	z-index: 999;
+}
+
+
+ul.topnav
+{
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	-webkit-transition:  1s; /* Safari */
+    transition:  1s;
+}
+
+ul.topnav > li {float: left; position: relative;}
+
+ul.topnav > li > a {
+        font-family: mainFont;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 12px;
+        text-decoration: none;
+}
+
+    ul.topnav > li > ul > li a {
+        font-family: mainFont;
+        display: inline-block;
+        color: white;
+        /*text-align: center;
+        padding: 14px 12px;*/
+        text-decoration: none;
+    }
+
+    ul.topnav li ul li {
+        list-style: none;
+        padding: 8px 15px;
+        margin: 0;
+        width: 180px;
+    }
+
+ul.menu > li > ul {
+    position: absolute;
+    top: 29px;
+}
+
+.sub-menu-top-login:hover li {
+}
+.sub-menu-top-login {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 48px;
+    left: 0;
+    padding:0;
+}
+.hamburger-menu-icon-wrapper {
+    display: none;
+    background: transparent;
+    margin-top: 20px;
+    margin-right: 10px;
+    float: right;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+.hamburger-menu
+{
+    width:30px;
+    height:4px;
+    background-color:white;
+    border-radius:5px;
+    position:relative;
+}
+
+.hamburger-menu:after, .hamburger-menu:before
+{
+    content: '';
+    width: 100%;
+    height:4px;
+    background-color:white;
+    position:absolute;
+    border-radius:5px;
+}
+
+.hamburger-menu:after
+{
+    top:8px;
+}
+
+.hamburger-menu:before
+{
+	
+    top:16px;
+}
+
+/* Side Nav *******/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Stay on top */
+    top: 0;
+    right: 0;
+    opacity: 0.9;
+    background-color: black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.2s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+	font-family: mainFont;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Loginbox **********/
+.shb-loginbox
+{
+	display: inline-block;
+	background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.23), 0 3px 6px 0 rgba(0,0,0,0.16);
+    margin: auto auto;
+}
+
+.shb-loginbox-title
+{
+	font-family: "mainFont", sans-serif;
+	margin: 10px 0px 10px 0px;
+	display: block;
+	color: rgba(0, 0, 0, 0.87);
+    font-weight:500;
+}
+
+
+.shb-loginbox-forgotusername
+{
+	font-family: "mainFont";
+	line-height: 35px;
+	height: 35px;
+	display: block;
+    font-size: 14px;
+    color: #3E4095;
+}
+
+.shb-loginbox-graybar
+{
+	display: inline-block;
+	height: 40px;
+	margin-top: 20px;
+	background-color: #e1e1e3;
+}
+
+.shb-loginbox-nextbtn
+{
+    cursor: pointer;
+	font-family: mainFont;
+	text-transform: uppercase;
+	color: white;
+	margin-top:20px;
+	height: 40px;
+	width: 100%;
+	border: 0px;
+	padding : 10px 20px 10px 20px;
+	background-color: #f58634;
+	-webkit-transition:  0.2s; /* Safari */
+    transition:  0.2s;
+    text-align: center;
+}
+
+
+.shb-passwordbox
+{
+	z-index: 0;
+	display: none;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	background-color: white;
+	opacity: 0.9;
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+	-webkit-transform: translate(-50%, -50%); /* Safari */
+	transform: translate(-50%, -50%);
+	overflow-y: hidden;
+	-webkit-transition:  0.2s; /* Safari */
+    transition:  0.2s;
+}
+
+.shb-passwordbox-title
+{
+	font-family: mainFont;
+	margin: 10px 0px 10px 0px;
+	display: block;
+	color: #000000;
+}
+
+
+.shb-passwordbox-forgotusername
+{
+	font-family: mainFont;
+	line-height: 35px;
+	height: 35px;
+	font-size: 10pt;
+	display: block;
+	color: #000000;
+	text-align: center;
+}
+
+.shb-passwordbox-graybar
+{
+	display: inline-block;
+	height: 40px;
+	margin-top: 20px;
+	background-color: #e1e1e3;
+}
+
+.shb-passwordbox-nextbtn
+{
+	font-family: mainFont;
+	text-transform: uppercase;
+	color: white;
+	margin-top:20px;
+	height: 40px;
+	width: 100%;
+	border: 0px;
+	padding : 10px 20px 10px 20px;
+	background-color: #f58634;
+}
+
+.shb-passwordbox-backbtn
+{
+	cursor: pointer;
+	font-family: mainFont;
+	text-transform: uppercase;
+	color: #111;
+	height: 40px;
+	width: 100%;
+	border: 0px;
+	padding : 10px 20px 10px 20px;
+	text-align: right;
+}
+
+input[type=text],[type=password]
+{
+	float: left;
+	display: inline-block;
+	padding: 8px;
+	border: 0px;
+	opacity: 1;
+	background: #e1e1e3;
+    /*margin-left: 10px;*/
+	outline: none;
+}
+@media (min-width: 768px) { 
+
+    .userName-container
+    {
+        padding-right: 0px;
+    }
+
+}
+
+/* Footer *********/
+.shb-footer
+{
+	padding: 0px 10px 0px 10px;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	display: block;
+	height: 30px;
+	background-color: #194477;
+}
+
+.shb-footer-hotlinebox
+{
+	float: left;
+	line-height: 30px;
+	height: 30px;	
+}
+
+.shb-footer-hotlinebox .icon-hotline
+{
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	background: url(../images/icon_hotline.png) no-repeat top left;
+	background-size: 15px 20px;
+	height: 20px;
+	width: 15px;
+
+}
+
+.shb-footer-hotlinebox .text-hotline
+{
+	font-family: mainFont;	
+	font-size: 10pt;
+	color: white;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px
+	
+}
+
+.shb-footer-langbox
+{
+	line-height: 30px;
+	height: 30px;	
+	float: right;
+}
+
+.shb-footer-langbox .text-language
+{
+	font-family: mainFont;	
+	font-size: 10pt;
+	color: white;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px
+}
+
+.shb-footer-langbox .text-language a
+{
+	color: white;	
+}
+
+.shb-footer-langbox .text-language a:hover
+{
+	text-decoration: underline;	
+}
+
+.shb-footer-langbox .text-language a:active
+{
+	text-decoration: underline;	
+	color: #f58634;
+}
+
+.container-fluid {
+    padding-top: 6% !important
+}
+/*tablet, mobile*/
+@media screen and (max-width: 767px) {
+    .shb-navbar-brand img
+	{
+		width: 100px;
+		height: auto;
+	}
+	.shb-loginbox-graybar
+	{
+		display: none;
+	}
+	.shb-passwordbox-nextbtn
+	{
+
+		margin-top:0px;
+	}
+
+	.shb-passwordbox-backbtn
+	{
+
+		text-align: center;
+	}
+	
+}
+@media screen and (max-width: 900px) {
+
+    .container-fluid {
+        padding-top: 0 !important
+    }
+
+	ul.topnav
+	{
+		display: none;
+	}
+
+    ul.navbar-nav {
+        display: none;
+    }
+
+    .navbar-fixed-top {
+        display: none;
+    }
+
+    .shb-navbar-brand{
+        display:block;
+    }
+
+    .hamburger-menu-icon-wrapper {
+        display: inline-block;
+    }
+
+    .shb-navbar {
+        overflow: hidden;
+        background-color: black;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.2);
+        border: 0px;
+    }
+
+}
+
+@media screen and (min-width: 901px) {
+	
+	#mySidenav
+	{
+		display: none;
+		width: 0px;
+	}
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+.modal::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal {
+    text-align: center;
+}
+
+textarea, input, *:focus { outline: none !important; }
+
+.img-logo-i
+{
+    height: auto;
+    max-height: 30px;
+    max-width: 100%;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.login-title {
+    font-weight: 900;
+    font-size: 16px;
+    color: #3E4095;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .col-login
+    {
+        margin: 0 auto;
+        float:none;
+    }
+    .login-title {
+         font-size: 17px;
+    }
+}
+
+.nopadding-left-right{
+    padding-left:0;
+    padding-right: 0;
+}
